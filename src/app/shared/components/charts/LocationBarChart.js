@@ -4,18 +4,33 @@ import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
 export class LocationBarChart extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: props.graphData
+    }
+  }
+
   componentDidMount() {
+    this.renderChart()
+  }
+
+  renderChart() {
     am4core.useTheme(am4themes_animated);
     am4core.addLicense("CH258896422");
 
     let info = this.props
+    console.log(`info`, info);
+
 
     // let card_name = info['name'];
     let card_id = info['card_id'];
-    let data = info['graph-data'];
+    // let data = info['graph-data'];
     let chart = am4core.create(card_id, am4charts.XYChart);
 
-    chart.data = data;
+
+    chart.data = this.state.data;
 
     chart.fontSize = 12;
     chart.colors.list = [
@@ -88,6 +103,8 @@ export class LocationBarChart extends Component {
   }
 
   render() {
+
+    this.renderChart()
     let card_class = this.props.card_class;
     let card_id = this.props.card_id;
 

@@ -38,10 +38,14 @@ export class Google extends Component {
         super(props);
         this.state = {
             leadspiedata: [{ "name": "Google Search", "value": 39 }, { "name": "Google Display", "value": 32 }, { "name": "Remarketing", "value": 7 }],
-            locationdata: [{ "name": "Assam", "points": 100 }, { "name": "Bihar", "points": 200 }, { "name": "Delhi", "points": 110 }, { "name": "Gujarat", "points": 100 }, { "name": "Haryana", "points": 100 }, { "name": "Karnataka", "points": 100 }, { "name": "Maharashtra", "points": 100 }, { "name": "Punjab", "points": 100 }, { "name": "Rajasthan", "points": 130 }, { "name": "Telangana", "points": 140 }],
+
+            locationdata: [],
+
             metrics: [{ "date": "2016", "value": 13 }, { "date": "2017", "value": 23 }, { "date": "2018", "value": 25 }, { "date": "2019", "value": 31 }, { "date": "2020", "value": 29 }, { "date": "2021", "value": 33 }],
             source_dropdown_options: [{ "value": "impression", "label": "Impression" }, { "value": "leads", "label": "leads" }, { "value": "click", "label": "Clicks" }, { "value": "spends", "label": "Spends" }, { "value": "conversion", "label": "Leads" }, { "value": "is_app_install", "label": "App Installs" }],
             source_metrices_dropdown_value: "impression",
+
+            graphData: [],
             dropdownData: [],
             selectedOptions: null,
             id: "",
@@ -182,8 +186,11 @@ export class Google extends Component {
     // }
 
 
-    handleStateOnChange(e) {
-        console.log("dd",e.target.value)
+    handleStateOnChange(value) {
+        console.log(`locationdata`, this?.state?.locationdata, value)
+        const selectedStateGraphData = this?.state?.locationdata?.filter((item) => item?.state === value?.value)
+        console.log(`selectedStateGraphData`, selectedStateGraphData)
+        this.setState({ selectedOptions: value, graphData: selectedStateGraphData })
     }
 
 
@@ -207,20 +214,19 @@ export class Google extends Component {
 
                 let location_list = result['location_data'];
 
-                console.log(":::::=======>>8=======", location_list)
-
-
                 let data_list = [];
                 let stateData_list = location_list?.map((item, index) => { return { value: item?.state, label: item?.state } })
 
-                // console.log("hi lisha", stateData_list);
+                console.log("hi lisha", stateData_list);
+                console.log(`location_list`, location_list)
 
                 location_list.map((info, index) => {
 
                     try {
                         let a = {
-                            "name": location_list[index]['location'],
-                            "points": location_list[index]['total_conversion'],
+                            name: location_list[index]['location'],
+                            state: location_list[index]['state'],
+                            points: location_list[index]['total_conversion'],
                         }
                         data_list.push(a);
 
@@ -229,12 +235,13 @@ export class Google extends Component {
                     }
 
                 });
-                console.log("========location_list_wwww=====", typeof (location_list), data_list)
+                // console.log("========location_list_wwww=====", typeof (location_list), data_list)
 
                 // console.log("========location_list_wwww_yyyyy=====", typeof (uniquestate))
 
+                let graphShowData = data_list.filter(item => item?.state === stateData_list[0]?.value)
 
-                this.setState({ is_location_loaded: true, dropdownData: stateData_list, selectedOptions: stateData_list[0], locationdata: data_list })
+                this.setState({ is_location_loaded: true, dropdownData: stateData_list, selectedOptions: stateData_list[0], locationdata: data_list, graphData: graphShowData })
             });
     }
 
@@ -392,8 +399,6 @@ export class Google extends Component {
 
         let lead_list = this.state.leadspiedata;
 
-        console.log("Lead list", lead_list)
-
         // console.log("google_total_conversion ", total_conversion);
         let total_conversion = 0;
         return (
@@ -463,7 +468,7 @@ export class Google extends Component {
                                 </Col>
                             </div>
                             <div className="">
-                                <LocationBarChart card_id="location-chart" card_class="icz-sectionchart" graph-data={this.state.locationdata} />
+                                <LocationBarChart card_id="location-chart" card_class="icz-sectionchart" graphData={this.state.graphData} />
                             </div>
                         </div>
                     </Col>

@@ -7,8 +7,7 @@ export class LocationDropdown extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            dropdownData: props?.stateList,
-            selectedOptions: props?.selectedOptions,
+
         }
     }
 
@@ -25,10 +24,9 @@ export class LocationDropdown extends Component {
     //     console.log(this.state.selectOptions)
     // }
 
-    // handleChange(e) {
-    //     this.setState({ id: e.value, name: e.label })
-
-    // }
+    handleChange(e) {
+        this.props.handleStateOnChange(e)
+    }
     // componentDidMount() {
     //     this.getOptions()
 
@@ -38,7 +36,7 @@ export class LocationDropdown extends Component {
     render() {
         return (
             <div>
-                <Select defaultValue={this.state.selectedOptions} options={this.state.dropdownData} onChange={(e) => this.props.handleStateOnChange(e)} />
+                <Select value={this.props.selectedOptions} options={this?.props?.stateList} onChange={this.handleChange.bind(this)} />
             </div>
         )
     }
