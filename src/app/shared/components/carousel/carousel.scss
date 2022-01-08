@@ -1,0 +1,114 @@
+@import '../../../../App.scss';
+.icz-carouselcontainer {
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
+    // overflow-x: auto;
+    // z-index: -1 !important;
+    .slick-track {
+        .slick-slide {
+            div {
+                div {
+                    .icz-cardwrapper {
+                        padding-left: 0 !important;
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .slick-track{
+
+//     display: flex;
+// }
+// .slick-prev,
+// .slick-next {
+//     top: 0 !important;
+//     bottom: -25px !important;
+//     right: 0 !important;
+//     &.slick-next {
+//         right: 0 !important;
+//     }
+//     &.slick-prev {
+//         right: 25px !important;
+//     }
+// }
+
+/* Slider */
+.slick-slider {
+    width: 100%;
+    .slick-list{
+        .slick-track{
+            display: flex;
+            width: 100% !important;
+        }
+    }
+    
+    // padding-bottom: 50px;
+}
+
+.slick-arrow {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background: url("../../../../assets//images/icons/svgs//sliderNextIcom.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 9;
+    &.slick-prev {
+        transform: translateX(-50%) translateX(-30px);
+        // z-index: 2;
+        left: calc(100% - 100px);
+        transform: rotate(180deg);
+    }
+    &.slick-next {
+        transform: translateX(-50%) translateX(30px);
+        z-index: 1;
+    }
+    &.slick-disabled {
+        cursor: default !important;
+        opacity: 0.5;
+    }
+}
+
+.slick-arrow + .slick-list{
+    padding-bottom: 50px;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    background: url("../../../../assets//images/icons/svgs//sliderNextIcom.svg") !important;
+}
+
+.slides .slide {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.slides .slide img {
+    width: 200px;
+}
+
+.slick-prev,
+.slick-next {
+    top: calc(100% - 50px);
+}
+
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}

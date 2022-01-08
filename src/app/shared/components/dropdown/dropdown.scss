@@ -1,0 +1,100 @@
+@import "../../../../App.scss";
+
+.icz-Dropdown {
+    height: 40px;
+    width: 100% !important;
+    min-width: 100px !important;
+    max-width: 200px !important;
+    text-align: left !important;
+    background-color: $white !important;
+    border: 1px solid $secondary-grey !important;
+    border-radius: 5px;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    color: $black !important;
+
+    @include xs {
+        width: 100% !important;
+    }
+}
+
+.dropdown {
+    .icz-campaigndropdown {
+        height: 40px;
+        width: 400px !important;
+        text-align: left !important;
+        background-color: $white !important;
+        border: 1px solid $secondary-grey !important;
+        border-radius: 5px;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        line-height: 1.2 !important;
+        color: $black !important;
+
+        @include lt-md {
+            width: auto !important;
+        }
+
+        @include lt-sm {
+            width: 100% !important;
+        }
+
+        
+    }
+}
+
+.icz-locationdropdown{
+    height: 40px;
+    width: 200px !important;
+    text-align: left !important;
+    background-color: $white !important;
+    border: 1px solid $secondary-grey !important;
+    border-radius: 5px;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    color: $black !important;
+
+    @include xs {
+        width: 100% !important; 
+    }
+}
+
+
+.dropdown-menu{
+    width: 100% !important;
+    max-width: 400px;
+}
+
+.icz-Dropdown[aria-expanded="true"] {
+    border-color: $primary !important;
+    color: $primary !important;
+}
+
+.css-1s2u09g-control {
+    width: 100%;
+    background-color: $white !important;
+    border: 1px solid $secondary-grey !important;
+    border-radius: 5px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    color: $black !important;
+}
+
+
+
+.css-6j8wv5-Input{
+    outline: none !important;
+}
+
+.css-xb97g8:hover{
+background-color: #11a1fd !important;
+color: #fff !important;
+}
+
+.css-319lph-ValueContainer{
+    width: 150px !important;
+}
+

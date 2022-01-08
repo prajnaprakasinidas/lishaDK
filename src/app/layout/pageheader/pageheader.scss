@@ -1,0 +1,85 @@
+@import "../../../App.scss";
+.icz-pageheaderwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: background-color 0.1s ease-in-out;
+    .icz-pageheadercontainer {
+        width: 100%;
+        display: flex;
+        .icz-stickylogowrapper {
+            display: none;
+        }
+        .icz-headerdetails {
+            width: 100%;
+            @include xs {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.icz-pageheaderwrapper.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 2;
+    transition: background-color 0.1s ease-in-out;
+    box-shadow: 0px 0px 4px #0000001a;
+    .icz-stickylogowrapper {
+        display: flex;
+        width: 66px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        .icz-stickylogo {
+            width: 40px;
+            height: auto;
+        }
+    }
+    .icz-headerdetails {
+        padding: 0 20px;
+        width: 100%;
+    }
+}
+
+.icz-pagefiltersection {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    transition: background-color 0.1s ease-in-out;
+    .dropdown {
+        padding: 0 10px;
+        @include xs {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+.icz-pageheadercontainer {
+    @include lt-sm {
+        .icz-headerdetails {
+            display: flex;
+            flex-direction: row !important;
+            justify-items: center;
+            align-items: center;
+            .icz-pagefiltersection {
+                width: auto;
+                .dropdown {
+                    display: none;
+                }
+                .icz-datepickersection {
+                    display: none;
+                }
+            }
+        }
+    }
+}

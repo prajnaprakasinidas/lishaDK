@@ -1,0 +1,127 @@
+@import "../../../App.scss";
+
+.navbar {
+    height: $navbar-height;
+    background-color: $navbar-bg;
+    color: $navbar-color;
+    box-shadow: $navbar-box-shadow;
+    padding: 15px;
+    z-index: 2;
+
+    @include xs {
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        padding: 0 !important;
+
+        .icz-logo {
+            width: auto;
+            height: 44px;
+        }
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+
+        @include xs {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-item {
+            background-color: transparent;
+        }
+
+        .dropdown {
+            .dropdown-toggle {
+                padding: 0 !important;
+
+                &::after {
+                    display: none !important;
+                    // color: $navbar-color;
+                    // margin-left: 5px;
+                }
+            }
+        }
+
+        .nav-link[aria-expanded="true"] {
+            color: $primary;
+        }
+
+        .nav-link:hover .icz-navbarIcon,
+        .nav-link[aria-expanded="true"] .icz-navbarIcon {
+            stroke: $primary;
+        }
+
+        .icz-navbarIcon-height {
+            font-size: $navbar-icon-size;
+            color: $navbar-color;
+            width: auto;
+            height: 18px;
+
+            &:hover {
+                stroke: $primary;
+            }
+        }
+
+        .icz-navbarIcon-width {
+            font-size: $navbar-icon-size;
+            color: $navbar-color;
+            width: 12px;
+            height: auto;
+
+            &:hover {
+                stroke: $primary;
+            }
+        }
+
+        .dropdown-toggle:hover,
+        .dropdown-toggle[aria-expanded="true"] {
+            .icz-navUserdropdownBtn {
+                .icz-navbarProfileImg {
+                    border-color: $primary;
+                }
+
+                .icz-title {
+                    color: $primary;
+                }
+
+                .icz-navbarIcon {
+                    stroke: transparent;
+                    fill: $primary;
+                }
+            }
+        }
+
+        .icz-navUserdropdownBtn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+            .icz-navbarProfileImg {
+                width: 52px;
+                height: 52px;
+                border: 2px solid transparent;
+                border-radius: 100%;
+            }
+
+            .icz-title {
+                font-size: $navbar-font-size;
+                color: $navbar-color;
+                margin-left: 10px;
+                font-weight: 500;
+
+                @include xs {
+                    display: none;
+                }
+            }
+        }
+    }
+}

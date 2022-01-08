@@ -1,0 +1,632 @@
+@import "../../../../App.scss";
+.disabled.icz-cardwrapper {
+  pointer-events: none;
+}
+
+.icz-cardwrapper {
+  padding: 10px;
+  background-color: transparent;
+  width: auto;
+  position: relative;
+  &:first-child {
+    padding-left: 0;
+  }
+  // &:last-child {
+  //     padding-right: 0;
+  // }
+  .icz-card {
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px #d7aae23b;
+    width: 190px;
+    height: 100%;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    .icz-cardheader {
+      // background: linear-gradient(180deg, #ffffff, #f2f2f2);
+      background-color: $white;
+      padding: 10px 15px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      // box-shadow: 5px 10px 8px 10px #888888;
+      box-shadow: 0 10px 10px 0px rgba(242, 242, 242, 0.5);
+      .icz-iconwrapper {
+        .icz-icon {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      .icz-titlewrapper {
+        padding-left: 10px;
+        .icz-title {
+          font-size: 14px;
+          color: $secondary-grey;
+          font-weight: 700;
+          line-height: 1.2;
+          margin-bottom: 0;
+        }
+      }
+      
+}
+    .icz-cardbody {
+      padding: 20px;
+      // background-color: $white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      .icz-detailsrow {
+        .icz-valuesection {
+          font-size: 18px;
+          color: $secondary-grey-dark;
+          line-height: 1.2;
+          font-weight: 500;
+          display: flex;
+          justify-content: flex-start;
+          align-items: baseline;
+          margin-bottom: 5px;
+          .icz-currentvalue,
+          .icz-currentvalue span {
+            font-size: 27px;
+            color: $black;
+            line-height: 1.2;
+            font-weight: 500;
+          }
+          .icz-valuedivider {
+            margin: 0 5px;
+          }
+          .icz-previousvalue {
+            font-size: 18px;
+            color: $secondary-grey-dark;
+            line-height: 1.2;
+            font-weight: 500;
+          }
+        }
+        .icz-detailsrowtitlewrapper {
+          .icz-detailsrowtitle {
+            font-size: 14px;
+            color: $secondary-grey;
+            line-height: 1.2;
+            font-weight: 400;
+            margin-bottom: 0;
+          }
+        }
+        .icz-previousvalue {
+          font-size: 18px;
+          color: $secondary-grey-dark;
+          line-height: 1.2;
+          font-weight: 500;
+        }
+      }
+      .icz-cardgrowthsection {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+      .icz-divider {
+        width: 100%;
+        height: 2px;
+        background-color: $secondary-grey-light;
+        margin: 10px 0;
+        opacity: 0.5;
+      }
+      .icz-cardchart {
+        width: 100%;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.icz-cardwrapper.active {
+  .icz-card {
+    border-bottom: 4px solid $primary;
+    .icz-cardarrow {
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      // border: 1px solid rgba(0,0,0,.15);
+      border-bottom: none;
+      border-right: none;
+      // width: 15px;
+      // height: 15px;
+      // transform: rotate(-135deg);
+      // border-radius: 5px 0 0 0;
+      // background: $primary;
+      // -webkit-box-shadow: 0px 3px 10px #d7aae23b;
+      // box-shadow: 0px 3px 10px #d7aae23b;
+      // will-change: transform;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid $primary;
+    }
+  }
+}
+
+.icz-row {
+  .icz-sectioncardwrapper {
+    flex-wrap: wrap;
+    @include lt-md {
+      padding: 10px 0 !important;
+      width: 100%;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.icz-sectioncardwrapper {
+  padding: 10px;
+  .icz-sectioncard {
+    background-color: $white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 3px 10px #d7aae23b;
+    width: 100%;
+    height: auto;
+    .icz-cardheader {
+      background-color: $white;
+      padding: 10px 20px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      .icz-sectiontitle {
+        font-size: 20px;
+        color: $black;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .icz-cardtitle {
+        font-size: 20px;
+        color: $black;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0;
+        text-align: left;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .icz-cardfilter {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+    // .icz-chartsection {
+    // }
+    .icz-chartdetailssection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .icz-imagewrapper {
+        height: 250px;
+        width: auto;
+        .icz-image {
+          width: auto;
+          height: 100%;
+        }
+      }
+      .icz-detailsdatasection {
+        padding: 10px;
+        width: 100%;
+        .icz-detailsdatatab {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 10px;
+          border-bottom: 1px solid rgba(112, 112, 112, 0.1);
+          &:last-child {
+            border-bottom: none;
+          }
+          .icz-iconwrapper {
+            .icz-icon {
+              width: 50px;
+              height: 50px;
+            }
+          }
+          .icz-titlewrapper {
+            margin-left: 10px;
+            .icz-title {
+              color: $secondary-grey-dark;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 1.2;
+            }
+            .icz-highlight {
+              font-size: 27px;
+              color: $black;
+            }
+            .icz-subtitle {
+              color: $secondary-grey;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 1.4;
+            }
+          }
+        }
+        .icz-badgecontainer {
+          padding: 5px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .icz-badge {
+            background-color: $secondary-grey-light;
+            color: $secondary-grey-dark;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 400;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.icz-pcardwrapper {
+    padding: 20px;
+    background-color: transparent;
+    width: auto;
+    position: relative;
+    &:first-child {
+      padding-left: 0;
+    }
+    .icz-pcard {
+        background-color: #fff;
+        border-radius: 5px;
+        width: 300px;
+        height: 100%;
+        position: relative;
+        border: 1px solid #eee;
+      }
+      .icz-pcard-header {
+        background-color: #fff;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        padding: 10px 15px;
+    
+        .icz-pcard-iconwrapper {
+            .icz-icon {
+              width: 35px;
+              height: 35px;
+            }
+            
+            .icz-profileimg {
+                width: 50px;
+                height: 50px;
+                border: 2px solid transparent;
+                border-radius: 100%;
+            }
+          }
+          .icz-titlewrapper {
+            padding-left: 10px;
+            .icz-title {
+              font-size: 14px;
+              color: #213345;
+              font-weight: 400;
+              line-height: 1.2;
+              margin-bottom: 0;
+            }
+            .icz-subtitle {
+                color: $secondary-grey;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 1.4;
+              }
+              
+          }
+      }
+}
+
+  .icz-postscard-body{
+    padding: 20px;
+    
+    .icz-pcard-detailsrowtitlewrapper {
+        margin-bottom: 10px;
+
+        .icz-detailsrowtitle {
+          font-size: 14px;
+          color: #213345;
+          line-height: 1.2;
+          font-weight: 400;
+          margin-bottom: 0;
+          
+        }
+
+        .icz-detailsrowtitle span {
+            font-size: 12px;
+            color: #213345;
+            padding: 0px 10px 0px 0px;
+          }
+
+        .icz-detailsrowsubtitle {
+            font-size: 12px;
+            color: $secondary-grey;
+            line-height: 1.2;
+            font-weight: 400;
+            margin-bottom: 0;
+          }
+
+          .icz-iconsection{
+              text-align: right;
+          }
+      }
+  }
+
+  .icz-fcardwrapper {
+    padding: 20px;
+    background-color: transparent;
+    width: auto;
+    position: relative;
+    &:first-child {
+      padding-left: 0;
+    }
+    .icz-fcard {
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        position: relative;
+      }
+      .icz-fcard-header {
+        background-color: #fff;
+        display: block;
+
+        .icz-bannerimg {
+          width: 500px;
+          height: auto;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+        }
+        
+        .icz-fcard-iconwrapper {
+            .icz-icon {
+              width: 35px;
+              height: 35px;
+            }
+        }
+          
+      }
+}
+
+.icz-fpostscard-body{
+
+  .icz-fcard-detailsrowtitlewrapper {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+
+     .icz-bannerdetails{
+       display: flex;
+       justify-content: flex-start;
+       align-items: center;
+     }
+    
+      .icz-bannerlogoimg {
+        width: 100px;
+        height: auto;
+        .icz-cardheader {
+            background-color: $white;
+            padding: 10px 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            .icz-sectiontitle {
+                font-size: 20px;
+                color: $black;
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 0;
+                text-align: left;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .icz-cardtitle {
+                font-size: 20px;
+                color: $black;
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 0;
+                text-align: left;
+                height: 60px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .icz-cardsubtitle {
+                font-size: 16px;
+                color: $secondary-grey-dark;
+                font-weight: 500;
+                line-height: 1.2;
+                margin-bottom: 0;
+                text-align: left;
+                // height: 60px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            .icz-cardfilter {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+        .icz-chartsection {
+        }
+        .icz-chartdetailssection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 0px;
+            .icz-imagewrapper {
+                height: 250px;
+                width: auto;
+                .icz-image {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+            .icz-detailsdatasection {
+                padding: 10px;
+                width: 100%;
+                .icz-detailsdatatab {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 10px;
+                    border-bottom: 1px solid rgba(112, 112, 112, 0.1);
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    .icz-iconwrapper {
+                        .icz-icon {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                    .icz-titlewrapper {
+                        margin-left: 10px;
+                        .icz-title {
+                            color: $secondary-grey-dark;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 1.2;
+                        }
+                        .icz-highlight {
+                            font-size: 27px;
+                            color: $black;
+                        }
+                        .icz-subtitle {
+                            color: $secondary-grey;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 1.4;
+                        }
+                    }
+                }
+                .icz-badgecontainer {
+                    padding: 5px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .icz-badge {
+                        background-color: $secondary-grey-light;
+                        color: $secondary-grey-dark;
+                        font-size: 14px;
+                        line-height: 1.2;
+                        font-weight: 400;
+                        padding: 10px 15px;
+                        border-radius: 5px;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        
+      }
+
+      .icz-bannerlogo{
+       padding: 10px;
+      }
+
+      .icz-detailsrowtitle {
+        font-size: 14px;
+        color: #213345;
+        line-height: 1.2;
+        font-weight: 400;
+        margin-bottom: 0;
+        
+      }
+
+      .icz-titlewrapper {
+        padding: 10px;
+        .icz-title {
+          font-size: 14px;
+          color: #213345;
+          font-weight: 400;
+          line-height: 1.2;
+          margin-bottom: 0;
+        }
+        .icz-subtitle {
+            color: $secondary-grey;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.4;
+          }
+          
+      }
+    }
+}
+
+@media (max-width: 576px) {
+  .icz-fcard-detailsrowtitlewrapper {
+    display: block !important;
+  }
+  .icz-bannerimg {
+    width: 200px !important;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .icz-bannerlogoimg {
+    width: 60px !important;
+    height: auto;
+    top: 45px !important;
+    position: absolute !important;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+   }
+   .icz-bannerdetails{
+    display: block !important;
+    text-align: center;
+    padding-top: 10px;
+   }
+
+   .icz-cardfilter {
+    justify-content: flex-start !important;
+   }
+
+  }
+}

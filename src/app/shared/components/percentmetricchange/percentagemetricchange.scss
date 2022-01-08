@@ -1,0 +1,44 @@
+@import '../../../../App.scss';
+
+.icz-metricchangesection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .icz-iconsection{
+        margin-right: 5px;
+        width: 15px;
+        height: auto;
+
+        .icz-icon{
+            width: 100%;
+        }
+    }
+
+    .icz-metricvalue{
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-align: left;
+        color: inherit;
+    }
+
+    .positive{
+        color: $secondary-green;
+    }
+
+    .neutral{
+        color: $secondary-grey;
+    }
+
+    .negative{
+        color: $secondary-red;
+    }
+
+}
+
+
+
+

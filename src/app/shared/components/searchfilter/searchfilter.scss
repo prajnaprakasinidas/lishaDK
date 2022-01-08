@@ -1,0 +1,49 @@
+@import '../../../../App.scss';
+
+.icz-inputwrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 35px;
+    width: auto;
+    position: relative;
+    width: 100%;
+
+    .icz-input{
+        width: 100%;
+        max-width: 285px;
+        &:focus + .icz-searchbtn{
+            .icz-inputicon{
+                stroke: $primary;
+            }
+        }   
+
+    }
+
+    .icz-searchbtn{
+        background-color: transparent;
+        border: none;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icz-inputicon{
+            width: 15px;
+            height: auto;
+        }
+
+        &:hover{
+            background-color: transparent;
+
+            .icz-inputicon{
+                stroke: $primary;
+            }
+
+        }
+    }
+
+}

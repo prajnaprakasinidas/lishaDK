@@ -1,0 +1,438 @@
+@import './breakpoints.scss';
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+$primary: #11a1fd;
+$primary-light: #4cc3fd;
+$primary-medium: #0c7dd9;
+$primary-dark: #085db6;
+$secondary: #4b4b4d;
+$secondary-red: #d51f30;
+$secondary-red-light: #e96e7a;
+$secondary-red-medium: #b51c2a;
+$secondary-red-dark: #85010d;
+$secondary-purple: #5a75f9;
+$secondary-purple-light: #8298fb;
+$secondary-purple-medium: #4259d4;
+$secondary-purple-dark: #3247b5;
+$secondary-green: #07c180;
+$secondary-green-light: #3cd795;
+$secondary-green-medium: #06a57d;
+$secondary-green-dark: #3247b5;
+$secondary-yellow: #ff9931;
+$secondary-yellow-light: #ffb866;
+$secondary-yellow-medium: #db7823;
+$secondary-yellow-dark: #b45917;
+$secondary-grey: #7d9eb5;
+$secondary-grey-light: #cedfe8;
+$secondary-grey-medium: #a7c1d2;
+$secondary-grey-dark: #486f88;
+$white: #fff;
+$black: #213345;
+$colors: ( "white": #fff,
+"black": #213345,
+);
+$theme-colors: ( "primary": $primary,
+"secondary": $secondary,
+"dark": $black,
+);
+$theme-font: "Ubuntu",
+sans-serif;
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: $primary;
+    --bs-secondary: $secondary;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 212, 42, 38 !important;
+    --bs-secondary-rgb: 75, 77, 77 !important;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 0, 0, 0 !important;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-font-sans-serif: "Ubuntu", sans-serif !important;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --shadow-1: rgba(0, 0, 0, 0.1);
+    --shadow-2: rgba(0, 0, 0, 0.2);
+    --shadow-3: rgba(0, 0, 0, 0.3);
+    --shadow-4: rgba(0, 0, 0, 0.4);
+    --shadow-5: rgba(0, 0, 0, 0.5);
+    --shadow-inset: rgba(255, 255, 255, 0.5);
+}
+
+$padding: 10px !important;
+$border-radius: 10px !important;
+$body-bg: #f8f8f8;
+$body-color: #213345;
+$primary-hover-color: rgba(41, 41, 41, 1);
+$primary-hover-bg: #bfe7ff;
+$navbar-bg: $white;
+$navbar-color: $black;
+$navbar-font-size: 16px;
+$navbar-icon-size: 18px;
+$navbar-height: 75px;
+$navbar-box-shadow: 0px 0px 4px #0000001A;
+$sidebar-width: 66px;
+$sidebar-bg: $black;
+$sidebar-height: 100vh;
+$sidebar-icon-color: $white;
+$sidebar-icon-hover-bg: $white;
+$sidebar-icon-hover-color: $black;
+$dropdown-font-size: 14px;
+$dropdown-color: rgba(41,
+41,
+41,
+0.8);
+$dropdown-box-shadow: 0px 3px 10px #d7aae23b;
+$dropdown-padding: 8px 15px;
+$dropdown-border-radius: 5px;
+:export {
+    primary: rgb(17, 161, 253);
+}
+
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// CUSTOM SCROLLBAR
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: $secondary-grey-light;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: $secondary-grey-medium;
+}
+
+a,
+.a {
+    color: $primary;
+}
+
+.text-secondary-grey {
+    color: $secondary-grey;
+}
+
+.icz-section-padding {
+    padding: 10px 0 !important;
+}
+
+.p-10 {
+    padding: 10px !important;
+}
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.icz-mb-20 {
+    margin-bottom: 20px;
+}
+
+.overflox-x-hidden{
+    overflow-x: hidden;
+}
+
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// SKELETON LOADING
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+.icz-skeleton {
+    border-radius: 5px;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// BUTTON
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+.btn:focus{
+    box-shadow: none !important;
+    outline: none;
+}
+
+.icz-btnwrapper {
+    margin: 10px;
+    .icz-themebtn {
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        color: $white;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        background-color: $primary;
+        padding: 10px 15px;
+        &:hover {
+            background-color: $black;
+        }
+
+        .icz-btnicon{
+            width: auto;
+            height: 20px;
+            margin-right: 5px;
+            stroke: $white;
+        }
+    }
+}
+
+button:focus {
+    box-shadow: none !important;
+}
+
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// DROPDOWN
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+.dropdown {
+    margin: 10px 0;
+}
+
+.dropdown-toggle {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    &::after {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        background-image: url("../images/icons/svgs/downArrow.svg") !important;
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 50%;
+        border: none !important;
+        margin-right: 0;
+        padding: 20px;
+        padding-right: 0;
+    }
+}
+
+.dropdown-toggle[aria-expanded="true"] ::after {
+    // background-image: url("../images/icons/svgs/downArrowActive.svg") !important;
+    transform: rotateY(180deg);
+}
+
+.dropdown-menu {
+    position: absolute !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: $white;
+    border-color: $white !important;
+    box-shadow: $dropdown-box-shadow !important;
+    border-radius: $dropdown-border-radius;
+    // z-index: 9999 !important;
+    .dropdown-item {
+        font-size: $dropdown-font-size !important;
+        color: $dropdown-color;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 0;
+        padding: $dropdown-padding;
+        &:first-child {
+            border-top-left-radius: $dropdown-border-radius;
+            border-top-right-radius: $dropdown-border-radius;
+        }
+        &:last-child {
+            border-bottom-left-radius: $dropdown-border-radius;
+            border-bottom-right-radius: $dropdown-border-radius;
+        }
+        &:hover {
+            color: $primary-hover-color;
+            background-color: $primary-hover-bg !important;
+        }
+        &:focus {
+            color: $primary-hover-color;
+            background-color: $primary-hover-bg !important;
+        }
+        &:active {
+            color: $primary-hover-color;
+            background-color: $primary-hover-bg !important;
+        }
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}
+
+.dropdown-menu.show{
+    z-index: 999 !important;
+} 
+
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// FORM CONTROL
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
+.form-control{
+    border-color: $secondary-grey !important;
+    color: $black !important;
+    border-radius: 5px !important;
+    height: 35px !important;
+    &:focus{
+        border-color: $primary !important;
+        box-shadow: none !important
+    }
+}
+
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+// CUSTOM THEME
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+.icz-wrapper {
+    margin: 0;
+    padding: 0;
+    // padding-top: $navbar-height;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+
+.icz-maincontainer {
+    margin: 0;
+    padding: 20px;
+    margin-left: 66px;
+    width: calc(100% - 66px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include xs {
+        padding: 10px;
+    }
+
+    .icz-pagewrapper{
+        width: 100%;
+    }
+
+    .icz-footercontainer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .icz-footerdetails{
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 400;
+            color: $secondary-grey;
+        }
+
+    }
+}
+
+.icz-pagetitle {
+    color: $black;
+    font-weight: 700;
+    text-align: left;
+    font-size: 28px;
+    margin: 10px 0;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.icz-sectionchart{
+    width: 100%;
+    height: 250px;
+    padding: 0px
+}
+
+.icz-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+/* import bootstrap to set changes */
+
+@import "node_modules/bootstrap/scss/bootstrap";

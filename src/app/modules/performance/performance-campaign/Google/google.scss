@@ -1,0 +1,288 @@
+@import "../../../../../App.scss";
+
+.icz-campaignsection {
+  padding: 10px;
+  background-color: transparent;
+  width: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.px-20 {
+  padding: 0px 20px;
+}
+
+.icz-deviceicon {
+  width: 60px;
+  height: 60px;
+}
+
+.icz-devicecardbody {
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+}
+
+.icz-devicecardtitle {
+  font-size: 20px;
+  color: #213345;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0;
+  text-align: left;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icz-devicecardheader {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.icz-piesection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.icz-piecontainer {
+  justify-content: flex-start;
+}
+
+.icz-piedetails {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.icz-pielbldata {
+  padding: 10px 0 0 0;
+  margin: 0 0 10px 0;
+  color: #486f88;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icz-lblcontainer-border {
+  border-top: 1px solid #cedfe8;
+}
+
+.icz-pielbldata .label-txt {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.icz-pielbldata .label-num {
+  justify-content: flex-end;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.icz-devicesection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.icz-devicelbldata {
+  color: #486f88;
+  display: flex;
+  max-width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border-right: 1px solid #cedfe8;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.icz-devicelbldata .label-txt {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.icz-devicelbldata p {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0px !important;
+}
+
+.icz-sourcecard {
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+}
+
+.icz-sourcecardheader {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.icz-sourcecardtitle {
+  font-size: 20px;
+  color: #213345;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0;
+  text-align: left;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.icz-sourcecardfilter {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icz-sourceline-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icz-sourcelinesection {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.icz-sourceline-labeldata {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 0 0;
+  margin: 0 0 10px 0;
+  color: #486f88;
+}
+
+.icz-sourceline-labeldata p {
+  font-size: 12px;
+  margin-bottom: 0px !important;
+  font-weight: normal !important;
+}
+
+.lblcontainer-border {
+  border-top: 1px solid #cedfe8;
+}
+
+.icz-sourceline-labeldata .label-txt {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.icz-sourceline-labeldata .label-num {
+  justify-content: flex-end;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.icz-dchartsection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.icz-leadchartsection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+}
+.icz-detailsdatasection {
+  height: 100%;
+  position: relative;
+}
+.icz-detailsdatatab{
+  position: relative;
+}
+.icz-detailsdatasection .icz-detailchartscroll:last-child {
+  position: sticky;
+  bottom: -5px;
+ 
+}
+.icz-sectionchart {
+  width: 100%;
+  height: 250px;
+}
+.icz-subtitle{
+  white-space: nowrap;
+}
+.icz-chartscroll {
+  display: flex;
+  max-height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.icz-detailscroll {
+  height: 250px;
+  overflow-y: auto;
+  position:relative;
+}
+.react-bootstrap-table.table-responsive table.table.table-striped thead  tr:nth-child(1)  th:nth-child(1),.react-bootstrap-table.table-responsive table.table.table-striped tbody tr td:nth-child(1){
+  position: sticky;
+  position: -webkit-sticky;
+  left:0;
+  // z-index:1111;
+  opacity: 111;
+
+}
+.react-bootstrap-table.table-responsive table.table.table-striped thead  tr:nth-child(1)  th:nth-child(1){
+  background-color: #213345;
+}
+.react-bootstrap-table.table-responsive table.table.table-striped tbody tr td:nth-child(1){
+background-color: #F5FBFF;
+}
+
+
+@media (max-width: 520px) {
+  .icz-piesection {
+    display: block;
+  }
+  .icz-devicelbldata {
+    border-right: none !important;
+    border-bottom: 1px solid #cedfe8 !important;
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+  .icz-devicesection {
+    display: block;
+  }
+
+  .icz-dchartsection {
+    display: block;
+  }
+
+  .icz-detailscroll{
+    align-items: flex-start !important;
+   }
+}
+
+@media (max-width: 768px) {
+  .icz-piesection {
+    display: block;
+  }
+  .icz-devicelbldata {
+    border-right: 1px solid #cedfe8;
+    border-bottom: none;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .icz-dchartsection {
+    display: block;
+  }
+}

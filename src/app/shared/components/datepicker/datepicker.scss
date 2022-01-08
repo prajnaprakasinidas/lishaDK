@@ -1,0 +1,113 @@
+@import "../../../../App.scss";
+.icz-datepickersection {
+    margin: 10px 0;
+    &:hover {
+        cursor: pointer;
+    }
+    @include xs {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.icz-datepickerwrapper {
+    width: 100%;
+    width: 230px;
+    height: 40px;
+    text-align: left !important;
+    background-color: $white !important;
+    border: 1px solid $secondary-grey !important;
+    border-radius: 5px;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    color: $black !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    @include xs {
+        width: 100%;
+    }
+    .icz-date {
+        color: #213345;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .icz-datepickericon {
+        width: 13px;
+        height: auto;
+        stroke: #486f88;
+    }
+}
+
+.icz-daterangepicker {
+    position: absolute;
+    top: 0;
+    right: -115px;
+    z-index: 1000;
+    @include xs {
+        flex-direction: column;
+        top: 0;
+        right: -8rem;
+    }
+    .rdrDefinedRangesWrapper {
+        @include xs {
+            width: 100%;
+        }
+        .rdrStaticRanges {
+            @include xs {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            .rdrStaticRange {
+                @include xs {
+                    display: flex;
+                    width: 33.33%;
+                }
+                .rdrStaticRangeLabel {
+                    @include xs {
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .rdrInputRanges {
+            @include xs {
+                flex-direction: row;
+                display: flex;
+            }
+            .rdrInputRange {
+                @include xs {
+                    padding: 10px;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    .rdrDayToday .rdrDayNumber span::after {
+        display: none !important;
+    }
+    .rdrCalendarWrapper {
+        color: #3d3d3d;
+        font-size: 12px;
+    }
+    .rdrDayNumber {
+        font-weight: 400;
+    }
+}
+
+.bs-popover-bottom>.popover-arrow::before,
+.bs-popover-auto[data-popper-placement^="bottom"]>.popover-arrow::before {
+    border-bottom-color: transparent !important;
+}
+
+.bs-popover-bottom>.popover-arrow::after,
+.bs-popover-auto[data-popper-placement^="bottom"]>.popover-arrow::after {
+    border-bottom-color: #eff2f7 !important;
+    @include xs {
+        border-bottom-color: #fff !important;
+    }
+}

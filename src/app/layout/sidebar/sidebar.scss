@@ -1,0 +1,54 @@
+@import "../../../App.scss";
+.icz-sidebarContainer {
+    width: $sidebar-width;
+    background-color: $sidebar-bg;
+    height: $sidebar-height;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    padding-top: $navbar-height;
+    .icz-sidebarwrapper {
+        padding: 10px 0;
+        .icz-sidebarul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            .icz-sidebarlist {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 0;
+                &.active {
+                    .icz-sidebarlink {
+                        background-color: $sidebar-icon-hover-bg;
+                        .icz-sidebaricon {
+                            stroke: $sidebar-icon-hover-color;
+                        }
+                    }
+                }
+                .icz-sidebarlink {
+                    width: 45px;
+                    height: 45px;
+                    background-color: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    transition: all 0.1s ease;
+                    &:active,
+                    &:hover {
+                        background-color: $sidebar-icon-hover-bg;
+                        .icz-sidebaricon {
+                            stroke: $sidebar-icon-hover-color;
+                        }
+                    }
+                    .icz-sidebaricon {
+                        width: auto;
+                        height: 30px;
+                        stroke: $sidebar-icon-color;
+                    }
+                }
+            }
+        }
+    }
+}

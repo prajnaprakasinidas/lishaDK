@@ -1,0 +1,36 @@
+@import '../../../../App.scss';
+
+svg{
+    width: 100%;
+}
+
+#red-icon{
+    animation: redIconAnimation 10s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes redIconAnimation{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#grey-icon{
+    animation: greyIconAnimation 5s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation-delay: 0.01s;
+}
+
+@keyframes greyIconAnimation{
+    from{
+        transform: rotateZ(360deg);
+    }
+    to{
+        transform: rotateZ(0deg);
+    }
+}

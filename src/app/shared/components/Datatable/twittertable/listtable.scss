@@ -1,0 +1,90 @@
+@import "../../../../../App.scss";
+
+.table > thead {
+  background-color: #213345 !important;
+  color: #fff;
+  font-weight: normal !important;
+}
+
+.react-bootstrap-table th.sortable {
+  font-weight: normal !important;
+}
+
+.react-bootstrap-table table {
+  table-layout: auto !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: #fff !important;
+  color: var(--bs-table-striped-color);
+}
+
+.table-striped > tbody > tr:nth-of-type(even) > * {
+  --bs-table-accent-bg: rgba(154, 220, 251, 0.1) !important;
+  color: var(--bs-table-striped-color);
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: #9adcfb !important ;
+  border-style: solid;
+  border-width: 0;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th > :nth-child(1) {
+  border-color: none !important ;
+  border-style: solid;
+  border-width: 0;
+}
+
+.dropup,
+.dropend,
+.dropdown,
+.dropstart {
+  display: none !important;
+}
+
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  justify-content: flex-end !important;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff !important;
+  background-color: #11a1fd !important;
+  border-color: #11a1fd !important;
+}
+
+.page-link {
+  color: #11a1fd !important;
+}
+
+tbody > tr > :nth-child(2),
+thead > tr > :nth-child(2) {
+  text-align: right !important;
+  padding-right: 20px !important;
+}
+
+tbody > tr > :nth-child(3),
+thead > tr > :nth-child(3) {
+  text-align: right !important;
+  padding-right: 20px !important;
+}
+
+tbody > tr > :nth-child(4),
+thead > tr > :nth-child(4) {
+  text-align: right !important;
+  padding-right: 20px !important;
+}
